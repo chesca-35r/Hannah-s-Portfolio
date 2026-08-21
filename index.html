@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hannah’s Digital Portfolio</title>
+
+    <style>
+        body {
+            background-color: #e9d8ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 50px 20px;
+        }
+
+        .card {
+            background-color: #fffaff;
+            border: 5px solid #c084fc;
+            border-radius: 30px;
+            padding: 40px 25px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 10px 25px rgba(150, 100, 200, 0.2);
+        }
+
+        h1 {
+            color: #8b5cf6;
+            font-size: 40px;
+        }
+
+        p {
+            color: #7c3aed;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        button {
+            display: block;
+            width: 90%;
+            margin: 18px auto;
+            padding: 16px;
+            border: none;
+            border-radius: 30px;
+            background-color: #c084fc;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a855f7;
+        }
+
+        .info {
+            display: none;
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            border-radius: 20px;
+            padding: 10px;
+            width: 80%;
+            margin: -5px auto 15px;
+            text-align: left;
+        }
+
+        li {
+            margin: 8px;
+        }
+
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            border: 7px solid #a855f7;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 30px auto;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>♡ Hello, I'm Hannah! ♡</h1>
+
+        <p>
+            Hi! I'm Hannah, a girl who lives with compassion, integrity and bravery.
+            The buttons tells my Hobbies, Things that I love, My favorites, and Fun Facts.
+        </p>
+
+        <div class="profile-pic">
+            <img src="my-picture.jpg" alt="My Picture">
+        </div>
+
+        <button onclick="showInfo('hobbies')">♡ Hobbies ♡</button>
+
+        <div id="hobbies" class="info">
+            <ul>
+                <li>💃 Dancing</li>
+                <li>✍️ Writing stories</li>
+                <li>📚 Reading</li>
+            </ul>
+        </div>
+
+        <button onclick="showInfo('loves')">♡ Things I Love ♡</button>
+
+        <div id="loves" class="info">
+            <ul>
+                <li>🥘 Eating</li>
+                <li>💗 K-pop</li>
+                <li>📖 Fiction stories</li>
+            </ul>
+        </div>
+
+        <button onclick="showInfo('favorites')">♡ My Favorites ♡</button>
+
+        <div id="favorites" class="info">
+            <ul>
+                <li>🛍 Shopping</li>
+                <li>🖥 Dramas</li>
+                <li>💜 Purple</li>
+            </ul>
+        </div>
+
+        <button onclick="showInfo('facts')">♡ Fun Facts ♡</button>
+
+        <div id="facts" class="info">
+            <ul>
+                <li>✨ I’ve been an academic achiever ever since!</li>
+                <li>📝 I enjoy making stories.</li>
+                <li>🏟 I am an SSLG Officer.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showInfo(id) {
+            let info = document.getElementById(id);
+
+            if (info.style.display === "block") {
+                info.style.display = "none";
+            } else {
+                info.style.display = "block";
+            }
+        }
+    </script>
+</body>
+  </html>
